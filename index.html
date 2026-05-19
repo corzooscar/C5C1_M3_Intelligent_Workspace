@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workspace Inteligente - Riwi</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Workspace Inteligente</h1>
+            <button id="theme-toggle" class="btn-icon">🌙 Noche</button>
+        </header>
+
+        <div id="welcome-banner" class="banner hidden"></div>
+
+        <section class="controls">
+            <input type="text" id="search-input" placeholder="Buscar tarea temporalmente...">
+            <div class="filters">
+                <button class="filter-btn active" data-filter="all">Todas</button>
+                <button class="filter-btn" data-filter="pending">Pendientes</button>
+                <button class="filter-btn" data-filter="completed">Completadas</button>
+            </div>
+        </section>
+
+        <section class="stats">
+            <p>Tareas completadas: <span id="completed-count">0</span></p>
+        </section>
+
+        <form id="todo-form">
+            <input type="text" id="todo-input" placeholder="¿Qué tienes planeado hoy?" required>
+            <button type="submit">Agregar</button>
+        </form>
+
+        <main>
+            <ul id="todo-list"></ul>
+        </main>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
